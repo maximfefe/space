@@ -3,7 +3,7 @@
   associations="true" dependencies="false" nesting-relationships="true" router="FAN">  
   <class id="1" language="java" name="fr.unilim.iut.spaceinvaders.Vaisseau" project="spaceinvaders" 
     file="/spaceinvaders/src/main/java/fr/unilim/iut/spaceinvaders/Vaisseau.java" binary="false" corner="BOTTOM_RIGHT">    
-    <position height="135" width="185" x="456" y="211"/>    
+    <position height="-1" width="-1" x="548" y="409"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
       sort-features="false" accessors="true" visibility="true">      
       <attributes public="true" package="true" protected="true" private="true" static="true"/>      
@@ -13,7 +13,7 @@
   <class id="2" language="java" name="fr.unilim.iut.spaceinvaders.SpaceInvaders" project="spaceinvaders" 
     file="/spaceinvaders/src/main/java/fr/unilim/iut/spaceinvaders/SpaceInvaders.java" binary="false" 
     corner="BOTTOM_RIGHT">    
-    <position height="-1" width="-1" x="221" y="275"/>    
+    <position height="-1" width="-1" x="202" y="404"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
       sort-features="false" accessors="true" visibility="true">      
       <attributes public="true" package="true" protected="true" private="true" static="true"/>      
@@ -23,20 +23,30 @@
   <class id="3" language="java" name="fr.unilim.iut.spaceinvaders.SpaceInvadersTest" project="spaceinvaders" 
     file="/spaceinvaders/src/test/java/fr/unilim/iut/spaceinvaders/SpaceInvadersTest.java" binary="false" 
     corner="BOTTOM_RIGHT">    
-    <position height="-1" width="-1" x="470" y="78"/>    
+    <position height="135" width="497" x="43" y="37"/>    
+    <display autosize="false" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="4" language="java" name="fr.unilim.iut.spaceinvaders.utils.HorsEspaceJeuException" project="spaceinvaders" 
+    file="/spaceinvaders/src/main/java/fr/unilim/iut/spaceinvaders/utils/HorsEspaceJeuException.java" binary="false" 
+    corner="BOTTOM_RIGHT">    
+    <position height="-1" width="-1" x="592" y="248"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
       sort-features="false" accessors="true" visibility="true">      
       <attributes public="true" package="true" protected="true" private="true" static="true"/>      
       <operations public="true" package="true" protected="true" private="true" static="true"/>    
     </display>  
   </class>  
-  <association id="4">    
+  <association id="5">    
     <end type="SOURCE" refId="2" navigable="false">      
-      <attribute id="5" name="vaisseau">        
-        <position height="0" width="0" x="0" y="0"/>      
+      <attribute id="6" name="vaisseau">        
+        <position height="0" width="0" x="0" y="131"/>      
       </attribute>      
-      <multiplicity id="6" minimum="0" maximum="1">        
-        <position height="0" width="0" x="0" y="0"/>      
+      <multiplicity id="7" minimum="0" maximum="1">        
+        <position height="0" width="0" x="0" y="131"/>      
       </multiplicity>    
     </end>    
     <end type="TARGET" refId="1" navigable="true"/>    
