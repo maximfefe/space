@@ -3,7 +3,10 @@ package fr.unilim.iut.spaceinvaders;
 
 public class SpaceInvaders {
 
-    int longueur;
+    private static final char MARQUE_VIDE = '.';
+	private static final char MARQUE_VAISSEAU = 'V';
+	private static final char MARQUE_FIN_LIGNE = '\n';
+	int longueur;
     int hauteur;
 	private Vaisseau vaisseau;
 
@@ -12,18 +15,34 @@ public class SpaceInvaders {
 	   this.hauteur = hauteur;
    }
     @Override
-	public String toString() {
+    public String toString() {
+		return recupererEspaceJeuDansChaineASCII();
+	}
+	
+    
+    public String recupererEspaceJeuDansChaineASCII() {
 		StringBuilder espaceDeJeu = new StringBuilder();
 		for (int y = 0; y < hauteur; y++) {
 			for (int x = 0; x < longueur; x++) {
-				if (vaisseau!=null && vaisseau.occupeLaPosition(x, y))
-					espaceDeJeu.append('V');
-				else
-					espaceDeJeu.append('.');
+				espaceDeJeu.append(recupererMarqueDeLaPosition(x, y));
 			}
-			espaceDeJeu.append('\n');
+			espaceDeJeu.append(MARQUE_FIN_LIGNE);
 		}
 		return espaceDeJeu.toString();
+	}
+    private char recupererMarqueDeLaPosition(int x, int y) {
+        char marque;
+        if (this.aUnVaisseauQuiOccupeLaPosition(x, y))
+           marque=MARQUE_VAISSEAU;
+        else
+           marque=MARQUE_VIDE;
+        return marque;
+	}
+	private boolean aUnVaisseauQuiOccupeLaPosition(int y, int x) {
+		return this.aUnVaisseau() && vaisseau.occupeLaPosition(x, y);
+	}
+	private boolean aUnVaisseau() {
+		return vaisseau!=null;
 	}
     public void positionnerUnNouveauVaisseau(int x, int y) {
         this.vaisseau = new Vaisseau(x, y);
